@@ -1,0 +1,24 @@
+{
+    "type": "function",
+    "function": {
+        "name": "get_calendar_events",
+        "description": "Get calendar events within a specified time range",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "start_time": {
+                    "type": "string",
+                    "description": "The start time for the event search, in ISO format"
+                },
+                "end_time": {
+                    "type": "string",
+                    "description": "The end time for the event search, in ISO format"
+                }
+            },
+            "required": [
+                "start_time",
+                "end_time"
+            ]
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "type": "function",
+    "function": {
+        "name": "create_calendar_event",
+        "description": "Create a calendar event.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "summary": {
+                    "type": "string",
+                    "description": "The summary or title of the event."
+                },
+                "start_time": {
+                    "type": "string",
+                    "description": "The start time of the event in RFC3339 format."
+                },
+                "end_time": {
+                    "type": "string",
+                    "description": "The end time of the event in RFC3339 format."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "(Optional) The description of the event."
+                },
+                "location": {
+                    "type": "string",
+                    "description": "(Optional) The location of the event."
+                },
+                "attendees": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "email": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "email"
+                        ]
+                    },
+                    "description": "(Optional) A list of attendees' email addresses."
+                }
+            },
+            "required": [
+                "summary",
+                "start_time",
+                "end_time"
+            ]
+        }
+    }
+}
