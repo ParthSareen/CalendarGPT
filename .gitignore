@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+credentials.json
+token.pickle
 __pycache__/
 *.py[cod]
 *$py.class

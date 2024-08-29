@@ -3,9 +3,11 @@ name = "calendar-agent"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "ParthSareen", email = "psareen@uwaterloo.ca" }
+    { name = "ParthSareen", email = "parth@extensible.dev" }
 ]
-dependencies = []
+dependencies = [
+    "dagent >= 0.0.4",
+    ]
 readme = "README.md"
 requires-python = ">= 3.8"
 
