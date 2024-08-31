@@ -30,6 +30,6 @@ while True:
     today_utc = utc_now.isoformat() + 'Z'
     today_est = est_now.isoformat() + 'Z'
 
-    messages = [{"role": "user", "content": "{} given that today is {} in UTC, which is {} EST, and it's {}.".format(user_input, today_utc, today_est, datetime.datetime.now().strftime("%A"))}]
+    messages = [{"role": "user", "content": "{}. Given that today is {} in UTC, which is {} EST, and it's {}.".format(user_input, today_utc, today_est, datetime.datetime.now().strftime("%A"))}]
     # entry_decision.run(prev_output=user_input)
     entry_decision.run(messages=messages)
