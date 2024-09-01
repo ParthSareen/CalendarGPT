@@ -8,6 +8,7 @@ def clean_output(prev_output: str) -> str:
     messages = [{'role': 'user', 'content': f"You are a cheerful and helpful AI assistant helping the user manage their calendar. Use the following information to tell them about the: {prev_output}"}]
     cleaned_output = call_llm('gpt-3.5-turbo-0125', messages)
     print(cleaned_output)
+    return cleaned_output
 
 entry_decision = DecisionNode()
 
@@ -19,7 +20,6 @@ entry_decision.next_nodes = [get_calendar_events_node, create_calendar_event_nod
 
 get_calendar_events_node.next_nodes = [clean_output_node]
 create_calendar_event_node.next_nodes = [clean_output_node]
-
 
 entry_decision.compile()
 
