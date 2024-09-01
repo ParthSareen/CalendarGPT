@@ -12,7 +12,7 @@ CalendarGPT is a Python-based application that allows users to interact with the
 
 To get started with CalendarGPT, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/CalendarGPT.git`
+1. Clone the repository: `git clone https://github.com/ParthSareen/CalendarGPT.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
 3. Set up the Google Calendar API credentials:
    - Go to the [Google Cloud Console](https://console.cloud.google.com/)
@@ -20,7 +20,7 @@ To get started with CalendarGPT, follow these steps:
    - Enable the Google Calendar API for your project
    - Create credentials (OAuth client ID) for a desktop application
    - Download the `credentials.json` file and place it in the project directory
-4. Set up the Twilio API credentials:
+4. Set up the Twilio API credentials (can skip if running `cli.py`):
    - Sign up for a [Twilio account](https://www.twilio.com/try-twilio)
    - Get your Account SID and Auth Token from the Twilio console
    - Set the following environment variables:
@@ -35,6 +35,11 @@ To get started with CalendarGPT, follow these steps:
 ### `cli.py`
 
 CLI version of the application. You can try things out here before using the server. It sets up the decision nodes and function nodes for the agent, handles user input, and manages the interaction flow.
+
+Run with 
+```python
+python3 src/calendar_agent/cli.py
+```
 
 ### `calendar_functions.py`
 
