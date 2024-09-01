@@ -7,6 +7,7 @@ authors = [
 ]
 dependencies = [
     "dagent >= 0.0.4",
+    "twilio"
     ]
 readme = "README.md"
 requires-python = ">= 3.8"
