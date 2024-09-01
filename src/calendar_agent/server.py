@@ -10,12 +10,13 @@ from pytz import timezone
 app = Flask(__name__)
 
 def clean_output(prev_output: str) -> str:
-    messages = [{'role': 'user', 'content': f"You are a cheerful and helpful AI assistant helping the user manage their calendar. Use the following information to tell them about the: {prev_output}"}]
+    messages = [{'role': 'user', 'content': f"You are a cheerful and helpful AI assistant called CalenderGPT helping the user manage their calendar. Use the following information to tell them about the: {prev_output}"}]
     cleaned_output = call_llm('gpt-3.5-turbo-0125', messages)
     print(cleaned_output)
     return cleaned_output
 
 
+# Define the nodes
 entry_decision = DecisionNode()
 
 get_calendar_events_node = FunctionNode(func=get_calendar_events)
@@ -23,6 +24,8 @@ create_calendar_event_node = FunctionNode(func=create_calendar_event)
 clean_output_node = FunctionNode(func=clean_output)
 send_message_node = FunctionNode(func=send_message)
 
+
+# Connect the nodes
 entry_decision.next_nodes = [get_calendar_events_node, create_calendar_event_node]
 
 get_calendar_events_node.next_nodes = [clean_output_node]
