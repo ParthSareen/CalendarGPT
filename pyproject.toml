@@ -7,8 +7,10 @@ authors = [
 ]
 dependencies = [
     "dagent >= 0.0.4",
-    "twilio"
-    ]
+    "twilio",
+    "google_auth_oauthlib",
+    "google-api-python-client>=2.144.0",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 
